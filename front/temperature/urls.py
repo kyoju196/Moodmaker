@@ -1,4 +1,4 @@
-from django.conf.urls import include, url
+from django.urls import include, path
 from . import views
 
 from django.conf import settings
@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 app_name = 'temperature'
 
 urlpatterns = [
-   url(r'^$', views.temperature.as_view(), name='temperature'),
+   path('', views.temperature.as_view(), name='temperature'),
 
 ]
 

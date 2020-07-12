@@ -28,6 +28,6 @@ urlpatterns = [
     path('audio/', include('audio.urls')),
     path('information/', include('information.urls')),
 
-    url(r'^data.json$', temperature.views.data_json),
-    url(r'^$', temperature.views.temperature),
+    path('data.json', temperature.views.data_json),
+    path('', temperature.views.temperature),
 ]
